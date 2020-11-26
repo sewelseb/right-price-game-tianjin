@@ -1,5 +1,6 @@
-﻿using System;
-using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.Extensions.DependencyInjection;
+using TheRightPriceGame.BusinessLayer;
+using TheRightPriceGame.DataAccessLayer;
 
 namespace TheRightPriceGame
 {
@@ -7,15 +8,18 @@ namespace TheRightPriceGame
     {
         static void Main(string[] args)
         {
-            var serviceProvider = new ServiceCollection()
-                .AddSingleton<IGame, RightPriceGame>()
-                .AddSingleton<IUserInteractionsManager, UserInteractionsManager>()
-                .BuildServiceProvider();
+            var serviceProvider = BuildTheServiceProvider();
 
             var game = serviceProvider.GetService<IGame>();
             game.PlayGame();
         }
 
-       
+        private static ServiceProvider BuildTheServiceProvider()
+        {
+            return new ServiceCollection()
+                .AddSingleton<IGame, RightPriceGame>()
+                .AddSingleton<IUserInteractionsManager, UserInteractionsManager>()
+                .BuildServiceProvider();
+        }
     }
 }

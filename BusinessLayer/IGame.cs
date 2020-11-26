@@ -1,4 +1,4 @@
-﻿namespace TheRightPriceGame
+﻿namespace TheRightPriceGame.BusinessLayer
 {
     public interface IGame
     {

@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace TheRightPriceGame
+namespace TheRightPriceGame.DataAccessLayer
 {
-    class UserInteractionsManager : IUserInteractionsManager
+    public class UserInteractionsManager : IUserInteractionsManager
     {
         public int GetUsersGuess()
         {

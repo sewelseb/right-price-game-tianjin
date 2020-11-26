@@ -1,6 +1,7 @@
 ﻿using System;
+using TheRightPriceGame.DataAccessLayer;
 
-namespace TheRightPriceGame
+namespace TheRightPriceGame.BusinessLayer
 {
     public class RightPriceGame : IGame
     {

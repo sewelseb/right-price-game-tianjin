@@ -1,4 +1,4 @@
-﻿namespace TheRightPriceGame
+﻿namespace TheRightPriceGame.DataAccessLayer
 {
     public interface IUserInteractionsManager
     {
